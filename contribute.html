@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postscript</title>
+  <style>
+    html,body {
+      background-color: #FFF2C8;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column; /* Default to stacking elements vertically */
+      margin: 0px;
+      padding:0px;
+
+    }
+
+    h1 {
+        margin:20px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 300; 
+        font-size:20px;
+    }
+
+   
+
+    h1:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      margin:20px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 300; 
+        font-size:20px;
+    }
+
+    p {
+        margin:20px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 300; 
+        font-size:14px;
+    }
+
+    @media (min-width: 600px) {
+      body {
+        flex-direction: row; 
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+
+      h1, .content, p {
+        text-align: left;
+      }
+    }
+
+</style>
+</head>
+<body>
+    <h1 onclick="location.href='index.html'">Postscript</h1>
+
+    <div class="content">Contribute</div>
+
+    <p>If you are an artist and would like to contribute art, please email annie@postscriptinter.net.</p>
+
+    <script>
+
+    </script>
+    </body>
+    </html>
