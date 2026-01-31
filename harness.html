@@ -20,48 +20,43 @@
       background-color: #FFF2C8;
       overflow: hidden;
       display: flex;
-      flex-direction: column; /* stack vertically by default */
+      flex-direction: column;
       margin: 0;
       padding: 0;
     }
 
-    /* Headline */
+    h1, .content, p {
+      font-family: 'ABC Diatype', sans-serif;
+      line-height: 1;
+    }
+
     h1 {
       margin: 20px;
-      font-family: 'ABC Diatype', sans-serif;
-      font-weight: normal; 
+      font-weight: normal;
       font-size: 20px;
-      line-height: 1;
     }
 
     h1:hover {
       text-decoration: underline;
     }
 
-    /* Section text */
     .content {
       margin: 20px;
-      font-family: 'ABC Diatype', sans-serif;
       font-weight: normal;
       font-size: 20px;
-      line-height: 1;
     }
 
-    /* Paragraph */
     p {
       margin: 20px;
-      font-family: 'ABC Diatype', sans-serif;
       font-weight: normal;
       font-size: 14px;
-      line-height: 1;
     }
 
-    /* Desktop layout */
     @media (min-width: 600px) {
       body {
         flex-direction: row;
         justify-content: flex-start;
-        align-items: flex-end; /* aligns bottoms of all text elements */
+        align-items: flex-end; /* aligns bottoms of all text */
       }
     }
 
