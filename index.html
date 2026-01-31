@@ -8,28 +8,32 @@
   
   <title>Postscript</title>
   <style>
-    html,body {
+    /* Import font */
+    @font-face {
+      font-family: 'ABC Diatype';
+      src: url('fonts/ABCDiatype-Regular.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    html, body {
       background-color: #FFF2C8;
       overflow: hidden;
       display: flex;
-      margin: 0px;
-      padding:0px;
-
+      margin: 0;
+      padding: 0;
     }
 
+    /* Headline styling */
     h1 {
-  margin: 20px;
-  @font-face {
-    font-family: 'ABC Diatype';         
-    src: url('fonts/ABCDiatype.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  line-height: 1;     
-}
+      margin: 20px;
+      font-family: 'ABC Diatype', sans-serif; /* use your font */
+      font-weight: normal;
+      line-height: 1; /* normalize height for alignment */
+    }
 
-
- .image-container {
-  position: absolute;
+    .image-container {
+      position: absolute;
       bottom: 0;
       right: 0;
       max-width: 100%;
@@ -39,19 +43,14 @@
       align-items: flex-end;
     }
 
-
     .image-container img {
-    
-      max-height: 70vh; 
-      max-width:100vw; 
-      bottom: 0; right: 0;  
-      justify-content: flex-end;
-      align-items: flex-end;
-      object-fit: contain; 
+      max-height: 70vh;
+      max-width: 100vw;
+      object-fit: contain;
       display: block;
     }
-    
-     .hotspot {
+
+    .hotspot {
       position: absolute;
       width: 50%;
       height: 50%;
@@ -67,23 +66,17 @@
       bottom: 0;
       right: 0;
     }
-     
 
-</style>
+  </style>
 </head>
 <body>
-    <h1>Postscript</h1>
+  <h1>Postscript</h1>
 
-    <div class="image-container">
-<img src="https://raw.githubusercontent.com/annieswanson/postscript/main/Monsters.png" alt="Monsters" />
+  <div class="image-container">
+    <img src="https://raw.githubusercontent.com/annieswanson/postscript/main/Monsters.png" alt="Monsters" />
 
-<div class="hotspot top-left" onclick="location.href='contribute.html';"></div>
-<div class="hotspot bottom-right" onclick="location.href='harness.html';"></div>
-</div>
-
-
-    <script>
-
-    </script>
-    </body>
-    </html>
+    <div class="hotspot top-left" onclick="location.href='contribute.html';"></div>
+    <div class="hotspot bottom-right" onclick="location.href='harness.html';"></div>
+  </div>
+</body>
+</html>
