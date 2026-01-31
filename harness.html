@@ -8,58 +8,64 @@
   
   <title>Postscript</title>
   <style>
-    html,body {
+    /* Import ABC Diatype font */
+    @font-face {
+      font-family: 'ABC Diatype';
+      src: url('ABCDiatype-Regular.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    html, body {
       background-color: #FFF2C8;
       overflow: hidden;
       display: flex;
-      flex-direction: column; /* Default to stacking elements vertically */
-      margin: 0px;
-      padding:0px;
-
+      flex-direction: column; /* stack vertically by default */
+      margin: 0;
+      padding: 0;
     }
 
+    /* Headline */
     h1 {
-        margin:20px;
-        font-family: 'Inter', sans-serif;
-        font-weight: 300; 
-        font-size:20px;
+      margin: 20px;
+      font-family: 'ABC Diatype', sans-serif;
+      font-weight: normal; 
+      font-size: 20px;
+      line-height: 1;
     }
 
     h1:hover {
       text-decoration: underline;
     }
 
+    /* Section text */
     .content {
-      margin:20px;
-        font-family: 'Inter', sans-serif;
-        font-weight: 300; 
-        font-size:20px;
+      margin: 20px;
+      font-family: 'ABC Diatype', sans-serif;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 1;
     }
 
+    /* Paragraph */
     p {
-        margin:20px;
-        font-family: 'Inter', sans-serif;
-        font-weight: 300; 
-        font-size:14px;
+      margin: 20px;
+      font-family: 'ABC Diatype', sans-serif;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 1;
     }
-     
-     @media (min-width: 600px) {
-  body {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-end; 
-  }
-}
+
+    /* Desktop layout */
+    @media (min-width: 600px) {
+      body {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end; /* aligns bottoms of all text elements */
       }
-
-      h1,
-.content,
-p {
-  line-height: 1;
-}
     }
 
-</style>
+  </style>
 </head>
 <body>
     <h1 onclick="location.href='index.html'">Postscript</h1>
@@ -68,9 +74,5 @@ p {
 
     <p>If you would like to purchase rights to art for use in a digital product, you can use our <a href="https://www.figma.com/community/plugin/1445806484052391914/human-art-source" target="_blank">Figma Plugin</a> or email annie@postscriptinter.net for a consultation.</p>
 
-
-    <script>
-
-    </script>
-    </body>
-    </html>
+</body>
+</html>
