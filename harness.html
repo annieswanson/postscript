@@ -8,12 +8,13 @@
   
   <title>Postscript</title>
   <style>
-    /* Import ABC Diatype font */
+    /* Import ABC Diatype font (match homepage naming) */
     @font-face {
-      font-family: 'ABC Diatype';
-      src: url('ABCDiatype-Regular.otf') format('opentype');
+      font-family: 'ABCDiatype';
+      src: local('ABCDiatype'), url('ABCDiatype-Regular.otf') format('opentype');
       font-weight: normal;
       font-style: normal;
+      font-display: swap;
     }
 
     html, body {
@@ -22,18 +23,21 @@
       display: flex;
       flex-direction: column;
       margin: 0;
-      padding: 0;
+      padding: 20px;
+      gap: 20px;
     }
 
     h1, .content, p {
-      font-family: 'ABC Diatype', sans-serif;
+      font-family: 'ABCDiatype', 'ABC Diatype', sans-serif;
       line-height: 1;
     }
 
     h1 {
-      margin: 20px;
+      margin: 0;
       font-weight: normal;
-      font-size: 20px;
+      font-size: 32px;
+      line-height: 1;
+      transform: translateY(-2px);
     }
 
     h1:hover {
@@ -41,22 +45,25 @@
     }
 
     .content {
-      margin: 20px;
+      margin: 0;
       font-weight: normal;
       font-size: 20px;
+      line-height: 1;
+      align-self: auto;
     }
 
     p {
-      margin: 20px;
+      margin: 0;
       font-weight: normal;
       font-size: 14px;
+      align-self: auto;
     }
 
     @media (min-width: 600px) {
       body {
-        flex-direction: row;
+        flex-direction: column; /* keep stacked vertically */
         justify-content: flex-start;
-        align-items: flex-end; /* aligns bottoms of all text */
+        align-items: flex-start; /* left-align text under the title */
       }
     }
 

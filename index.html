@@ -5,26 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <title>Postscript</title>
+    <link rel="preload" href="ABCDiatype-Regular.otf" as="font" type="font/otf" crossorigin>
     <style>
+      @font-face {
+        font-family: "ABCDiatype";
+        src: local("ABCDiatype"), url("ABCDiatype-Regular.otf") format("opentype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
       html,
       body {
         background-color: #fff2c8;
         overflow: hidden;
         display: flex;
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 20px;
       }
 
       h1 {
-        margin: 20px;
-
-        @font-face {
-          font-family: "ABC Diatype";
-          src: url("fonts/ABCDiatype.otf") format("opentype");
-          font-weight: normal;
-          font-style: normal;
-          line-height: 1;
-        }
+        margin: 0;
+        font-family: "ABCDiatype", "ABC Diatype", sans-serif;
+        font-weight: normal;
+        line-height: 1;
+        transform: translateY(-2px);
       }
 
       .image-container {
